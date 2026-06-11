@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodo360 Social - Orientación y Bienestar Social</title>
-    <meta name="description" content="Acompañamos, orientamos y facilitamos el acceso a beneficios sociales con un enfoque cercano y humano.">
+    <meta name="description" content="Acompañamos, orientamos y facilitamos el acceso a beneficios sociales con un enfoque cercano, claro y humano para personas y organizaciones.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <!-- Scroll Animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Splide.js CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
@@ -20,54 +23,195 @@
 
     <!-- Header / Nav -->
     <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <img src="./assets/logo.png" alt="Nodo360 Social Logo" class="brand-logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">Quiénes somos</a></li>
-                <li><a href="#instagram">Comunidad</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact" class="btn btn-secondary">Contacto</a></li>
-            </ul>
-            <div class="mobile-menu-icon" id="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="./assets/logo.png" alt="Nodo360 Social Logo" class="brand-logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">Quiénes somos</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#mitos">Mitos y Realidades</a></li>
+                    <li><a href="#instagram">Comunidad</a></li>
+                    <li><a href="#contact" class="btn btn-secondary">Contacto</a></li>
+                </ul>
+                <div class="mobile-menu-icon" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
+        <div class="diagonal-stripes stripes-top-left"></div>
         <div class="container hero-grid">
             <div class="hero-content" data-aos="fade-right">
-                <span class="accent-badge">Bienvenido a Nodo360</span>
+                <span class="accent-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Bienvenido a Nodo360 Social
+                </span>
+                <p class="hero-tagline">“Cada solución comienza con una conexión”</p>
                 <h1>Orientación y <span>Bienestar Social</span></h1>
-                <p>Acompañamos en los procesos sociales, facilitando el acceso a la información y derechos para mejorar tu calidad de vida.</p>
+                <p>Somos un equipo de profesionales dedicadas a acompañar, orientar y facilitar el acceso a beneficios sociales. Te ayudamos a resolver dudas y realizar postulaciones de manera cercana y sin enredos.</p>
                 <div class="hero-ctas">
                     <a href="#services" class="btn btn-primary">Nuestros servicios</a>
                     <a href="https://www.instagram.com/nodo360social/" target="_blank" class="instagram-link">
                         <svg class="instagram-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
-                        Seguir en Instagram
+                        Síguenos en Instagram
                     </a>
                 </div>
             </div>
-            <div class="hero-image" data-aos="zoom-in">
-                <img src="./assets/hero-social.png" alt="Equipo Nodo360 Colaborando" class="floating-img">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="100">
+                <img src="./assets/hero-social.png" alt="Acompañamiento Social Nodo360" class="floating-img">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="container flex-row">
-            <div class="about-text" data-aos="fade-up">
-                <h2 class="title-with-line">Quiénes somos</h2>
-                <div class="content-text">
-                    <p>Damos inicio a un camino dedicado a la <strong>orientación y el bienestar social</strong>.</p>
-                    <p>Somos un equipo de profesionales convencidas de que el acceso a la información es un derecho esencial para mejorar la calidad de vida.</p>
-                    <p>Buscamos acercar la información, aclarar dudas y acompañar en procesos que muchas veces se vuelven complejos.</p>
+        <div class="container about-grid">
+            <div class="about-text" data-aos="fade-right">
+                <div class="title-left">
+                    <h2 class="title-with-line">Quiénes somos</h2>
+                </div>
+                <p style="font-size: 1.2rem; margin-bottom: 20px; color: var(--primary-dark); font-weight: 600;">
+                    Damos inicio a un camino dedicado a la orientación y el bienestar social.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Somos una iniciativa creada por dos Trabajadoras Sociales con más de 8 años de experiencia en bienestar laboral, gestión de beneficios, recursos humanos y orientación social en contextos organizacionales.
+                </p>
+                <p>
+                    Creemos firmemente que el acceso a la información clara es un derecho esencial para mejorar la calidad de vida. Por eso, actuamos como un puente entre las personas y las oportunidades de apoyo existentes.
+                </p>
+                
+                <div class="about-highlights">
+                    <div class="highlight-box">
+                        <h4>Empatía & Claridad 💚</h4>
+                        <p>Aclaramos tus dudas de forma sencilla, sin enredos técnicos.</p>
+                    </div>
+                    <div class="highlight-box">
+                        <h4>Acompañamiento 🤝</h4>
+                        <p>Te guiamos paso a paso en cada postulación para que no pierdas oportunidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+                <div class="collage-container">
+                    <img src="./assets/ig-3.png" alt="Orientación Social" class="collage-img collage-img-1">
+                    <img src="./assets/ig-4.png" alt="Acompañamiento Nodo360" class="collage-img collage-img-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-bg">
+        <div class="diagonal-stripes stripes-bottom-right"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="title-with-line">Cómo te ayudamos</h2>
+                <p>Ofrecemos orientación integral tanto a personas individuales como a empresas que buscan fortalecer el bienestar social de sus trabajadores.</p>
+            </div>
+            
+            <div class="audience-tabs" data-aos="fade-up" data-aos-delay="100">
+                <button class="tab-btn active" onclick="filterServices('all')">Todos los servicios</button>
+                <button class="tab-btn" onclick="filterServices('personas')">Para Personas</button>
+                <button class="tab-btn" onclick="filterServices('organizaciones')">Para Organizaciones</button>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Persona -->
+                <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-wrap">🤝</div>
+                    <h3>Orientación Social Individual</h3>
+                    <p>Atención personalizada para resolver dudas relacionadas con tu Registro Social de Hogares (RSH), subsidios de salud, pensiones, educación y otras materias sociales.</p>
+                </div>
+                
+                <!-- Service 2: Persona -->
+                <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-wrap">🏠</div>
+                    <h3>Postulación a Subsidios</h3>
+                    <p>Asesoramiento experto y acompañamiento paso a paso en postulaciones a subsidios habitacionales (DS49, DS1), subsidio de arriendo y subsidios de empleo (Empleo Joven).</p>
+                </div>
+                
+                <!-- Service 3: Organizaciones -->
+                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-wrap">💡</div>
+                    <h3>Charlas y Talleres</h3>
+                    <p>Actividades educativas orientadas a capacitar a tus colaboradores sobre el uso estratégico y postulación a beneficios sociales y estatales.</p>
+                </div>
+
+                <!-- Service 4: Organizaciones -->
+                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-wrap">🏢</div>
+                    <h3>Bienestar Externalizado</h3>
+                    <p>Servicio continuo de Asesoría Social para empresas que no cuentan con una trabajadora social interna, apoyando la gestión del área de personas de forma personalizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mitos y Realidades Section -->
+    <section id="mitos" class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="title-with-line">Mitos vs Realidades</h2>
+                <p>Derribemos las falsas creencias sobre los beneficios estatales. Te enseñamos con la verdad y con peras y manzanas 🍎</p>
+            </div>
+
+            <div class="myr-grid">
+                <!-- Mito 1 -->
+                <div class="myr-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="badge-mito">
+                        <span>❌</span> MITO
+                    </div>
+                    <h3 class="myth-text">"El Registro Social de Hogares es solo para personas en extrema pobreza."</h3>
+                    
+                    <div class="arrow-divider">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+
+                    <div class="reality-box">
+                        <h4><span>✓</span> REALIDAD</h4>
+                        <p>El RSH agrupa a la población en 7 tramos de vulnerabilidad (desde 0% a 100%). Muchos subsidios de vivienda y empleo exigen tramos del 60%, 80% o incluso 90%. ¡Inscribirte es clave!</p>
+                    </div>
+                </div>
+
+                <!-- Mito 2 -->
+                <div class="myr-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="badge-mito">
+                        <span>❌</span> MITO
+                    </div>
+                    <h3 class="myth-text">"Si tengo casa propia no puedo volver a postular a ningún subsidio estatal."</h3>
+                    
+                    <div class="arrow-divider">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+
+                    <div class="reality-box">
+                        <h4><span>✓</span> REALIDAD</h4>
+                        <p>Existen programas especiales para propietarios, como el Subsidio de Arriendo (en casos específicos) y los subsidios de mejoramiento, acondicionamiento térmico y ampliación de vivienda.</p>
+                    </div>
+                </div>
+
+                <!-- Mito 3 -->
+                <div class="myr-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="badge-mito">
+                        <span>❌</span> MITO
+                    </div>
+                    <h3 class="myth-text">"El subsidio al Empleo Joven no sirve si ya tengo contrato de trabajo normal."</h3>
+                    
+                    <div class="arrow-divider">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+
+                    <div class="reality-box">
+                        <h4><span>✓</span> REALIDAD</h4>
+                        <p>¡Al contrario! El Subsidio al Empleo Joven (SEJ) está diseñado justamente para trabajadores dependientes o independientes de 18 a 24 años que coticen, aportando un monto extra a su sueldo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -77,35 +221,65 @@
     <section id="instagram" class="section-bg">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Nuestra Comunidad</h2>
-                <p>Síguenos en Instagram para mantenerte al día con las últimas noticias y guías sociales 👀</p>
+                <h2 class="title-with-line">Nuestra Comunidad</h2>
+                <p>Compartimos información valiosa sobre subsidios y guías en nuestro perfil. ¡Desliza para ver nuestras publicaciones! 💚</p>
             </div>
             
-            <div id="image-carousel" class="splide" aria-label="Instagram Posts Carousel">
+            <div id="image-carousel" class="splide" aria-label="Instagram Posts Carousel" data-aos="fade-up" data-aos-delay="100">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <li class="splide__slide">
                             <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-1.png" alt="Post RSH">
-                                <span class="ig-view">Ver en Instagram</span>
+                                <img src="./assets/ig-1.jpg" alt="Post de Instagram: Orientación RSH">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
                             </a>
                         </li>
                         <li class="splide__slide">
                             <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-2.png" alt="Post Guía">
-                                <span class="ig-view">Ver en Instagram</span>
+                                <img src="./assets/ig-2.jpg" alt="Post de Instagram: Ahorro Vivienda">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
                             </a>
                         </li>
                         <li class="splide__slide">
                             <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-3.png" alt="Post Acompañamiento">
-                                <span class="ig-view">Ver en Instagram</span>
+                                <img src="./assets/ig-3.jpg" alt="Post de Instagram: Acompañamiento y Guía">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
                             </a>
                         </li>
                         <li class="splide__slide">
                             <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-4.png" alt="Post Mitos">
-                                <span class="ig-view">Ver en Instagram</span>
+                                <img src="./assets/ig-4.jpg" alt="Post de Instagram: Registro Social de Hogares">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
+                                <img src="./assets/ig-5.jpg" alt="Post de Instagram: Subsidios Vivienda 2026">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
+                                <img src="./assets/ig-6.jpg" alt="Post de Instagram: Ahorro Vivienda Chile">
+                                <span class="ig-view">
+                                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                                    Ver en Instagram
+                                </span>
                             </a>
                         </li>
                     </ul>
@@ -113,48 +287,56 @@
             </div>
 
             <div class="center-cta" data-aos="fade-up">
-                <a href="https://www.instagram.com/nodo360social/" target="_blank" class="btn btn-secondary">Ir a Instagram</a>
+                <a href="https://www.instagram.com/nodo360social/" target="_blank" class="btn btn-secondary">Visitar nuestro Instagram</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Cómo te ayudamos</h2>
-                <p>Nuestra misión es facilitar tu acceso a beneficios y acompañarte paso a paso.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-wrap green">🤝</div>
-                    <h3>Orientación Social</h3>
-                    <p>Resolvemos tus dudas sobre subsidios, RSH y trámites sociales con un lenguaje claro y cercano.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-wrap yellow">👀</div>
-                    <h3>Acompañamiento</h3>
-                    <p>No estás solo. Te guiamos en procesos complejos para que no pierdas ningun oportunidad.</p>
-                </div>
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-wrap soft">🧠</div>
-                    <h3>Educación Social</h3>
-                    <p>Entendamos juntos el sistema. Te brindamos el valor práctico que necesitas para tu bienestar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA / Contact Section -->
+    <!-- Contact / B2B Section -->
     <section id="contact" class="section">
         <div class="container">
             <div class="contact-box" data-aos="flip-up">
-                <div class="contact-content">
-                    <h2>¿Necesitas orientación?</h2>
-                    <p>Si quieres implementar este apoyo en tu organización o necesitas ayuda personal, estaremos felices de atenderte.</p>
+                <div class="contact-grid">
                     <div class="contact-info">
-                        <a href="https://www.instagram.com/nodo360social/" target="_blank" class="btn btn-primary">Enviar Mensaje Directo</a>
-                        <p class="small">O escríbenos directamente a nuestro perfil corporativo 👀</p>
+                        <h2>¿Hablamos?</h2>
+                        <p>Si eres una persona buscando orientación sobre subsidios o si deseas implementar asesoría social en tu organización, escríbenos directamente. Revisamos tu caso contigo de manera cercana.</p>
+                        
+                        <div class="speech-bubble">
+                            ¿Tienes dudas? En Nodo360 te ayudamos a entender y postular <span>paso a paso</span> 💚
+                        </div>
+
+                        <div style="margin-top: 20px;">
+                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="btn btn-secondary" style="background-color: var(--white); color: var(--primary-dark);">
+                                Enviar mensaje directo por Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h3>Escríbenos directamente</h3>
+                        <form id="social-contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" class="form-control" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" class="form-control" placeholder="nombre@ejemplo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="type">Tipo de consulta</label>
+                                <select id="type" class="form-control" required>
+                                    <option value="individual">Consulta Personal (Subsidios / RSH)</option>
+                                    <option value="organizacion">Para mi Organización (Charlas / Convenios)</option>
+                                    <option value="otro">Otro tipo de consulta</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" rows="4" class="form-control" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-form">Enviar Consulta</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -166,18 +348,33 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <h3>Nodo360 <span>Social</span></h3>
-                <p>Cercana, Clara, Confiable y Empática.</p>
+                <p>Acompañar, orientar y facilitar el acceso a beneficios sociales con un enfoque cercano, claro y humano.</p>
+                <div class="footer-social-links">
+                    <a href="https://www.instagram.com/nodo360social/" target="_blank" class="social-icon-btn">
+                        <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
                 <ul>
-                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#about">Quiénes somos</a></li>
                     <li><a href="#services">Servicios</a></li>
-                    <li><a href="https://www.instagram.com/nodo360social/" target="_blank">Instagram</a></li>
+                    <li><a href="#mitos">Mitos y Realidades</a></li>
+                    <li><a href="#instagram">Comunidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Instagram: <a href="https://www.instagram.com/nodo360social/" target="_blank">@nodo360social</a></li>
+                    <li>Acompañamiento integral</li>
+                    <li>Todo cercano y sin enredos</li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Nodo360 Social. Tu información importa 💚</p>
+            <p>&copy; 2026 Nodo360 Social. Tu información importa <span>💚</span></p>
         </div>
     </footer>
 
