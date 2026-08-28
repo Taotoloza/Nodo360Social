@@ -1105,6 +1105,32 @@ header.scrolled .brand-logo {
     font-size: 0.98rem;
     line-height: 1.6;
     color: var(--text-color);
+    flex-grow: 1;
+}
+
+/* Teaser cards — subtle CTA at bottom */
+.service-card--teaser {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-cta-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: var(--transition);
+    letter-spacing: 0.2px;
+    align-self: flex-start;
+}
+
+.service-cta-link:hover {
+    color: var(--primary-dark);
+    border-bottom-color: var(--accent);
+    padding-left: 4px;
 }
 
 /* Mitos y Realidades */
