@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nodo360 Social - Tu Socio Estratégico en Bienestar Laboral</title>
-    <meta name="description" content="Conectamos personas, organizaciones y propósitos. Acompañamiento cercano, humano y estratégico en bienestar laboral y cumplimiento normativo.">
+    <meta name="description" content="Conectamos personas, organizaciones y propósitos. Acompañamiento cercano, humano y estratégico en bienestar laboral, gestión preventiva y cumplimiento normativo.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Quicksand (Encabezados amigables) + Nunito (Cuerpo legible) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Scroll Animations -->
+    <!-- Scroll Animations (AOS) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
-    <!-- Splide.js CSS -->
+    <!-- Splide.js CSS (Carousel) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     
     <link rel="stylesheet" href="style.css">
@@ -21,537 +22,638 @@
 </head>
 <body>
 
-    <!-- Header / Nav -->
-    <header id="header">
+    <!-- Header / Navbar Accesible y Sticky -->
+    <header id="header" role="banner">
         <div class="container">
-            <nav>
-                <a href="#" class="logo">
-                    <img src="./assets/logo.png" alt="Nodo360 Social Logo" class="brand-logo">
+            <nav role="navigation" aria-label="Navegación principal">
+                <a href="#" class="logo" aria-label="Nodo360 Social Inicio">
+                    <img src="./assets/logo.png" alt="Logotipo oficial de Nodo360 Social" class="brand-logo">
                 </a>
-                <ul class="nav-links">
+                <ul class="nav-links" id="main-nav-links">
                     <li><a href="#about">Quiénes somos</a></li>
-                    <li><a href="#solucion">Propuesta Estratégica</a></li>
-                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#solucion">Propuesta</a></li>
                     <li><a href="#metodologia">Metodología</a></li>
-                    <li><a href="#mitos">Mitos vs Realidad</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#ecosistema">Ecosistema</a></li>
                     <li><a href="#discovery" class="btn btn-secondary">Sesión Discovery</a></li>
                 </ul>
-                <div class="mobile-menu-icon" id="mobile-menu-toggle">
+                <button class="mobile-menu-icon" id="mobile-menu-toggle" aria-label="Abrir o cerrar menú de navegación" aria-expanded="false" aria-controls="main-nav-links">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="diagonal-stripes stripes-top-left"></div>
-        <div class="container hero-grid">
-            <div class="hero-content" data-aos="fade-right">
-                <span class="accent-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    Nodo360 Social • Bienestar y Personas
-                </span>
-                <p class="hero-tagline">“Cada solución comienza con una conexión”</p>
-                <h1>Conectamos Personas, <span>Organizaciones y Propósitos</span></h1>
-                <p>
-                    Tu socio estratégico para un entorno laboral saludable, cercano y vinculado con la normativa vigente. Transformamos el bienestar en un activo de continuidad operacional y cultura preventiva.
-                </p>
-                <div class="hero-ctas">
-                    <a href="#discovery" class="btn btn-primary">Conocer Discovery Session</a>
-                    <a href="https://www.instagram.com/nodo360social/" target="_blank" class="instagram-link">
-                        <svg class="instagram-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
-                        @nodo360social
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section: Conexión Estratégica -->
+        <section id="hero" class="section-hero">
+            <div class="diagonal-stripes stripes-top-left" aria-hidden="true"></div>
+            <div class="container hero-grid">
+                <div class="hero-content" data-aos="fade-right">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <span>Socio Estratégico en Bienestar</span>
+                    </div>
+                    <p class="hero-tagline">“Cada solución comienza con una conexión”</p>
+                    <h1>Conectamos Personas, <span>Organizaciones y Propósitos</span></h1>
+                    <p>
+                        Tu socio estratégico para un entorno laboral saludable, cercano y vinculado con la normativa vigente. Transformamos el bienestar en un activo de continuidad operacional y cultura preventiva.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#discovery" class="btn btn-primary">
+                            <span>Solicitar Discovery Session</span>
+                            <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="instagram-link" aria-label="Visitar perfil de Instagram @nodo360social">
+                            <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                            <span>@nodo360social</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="./assets/hero-social.png" alt="Ilustración representativa de acompañamiento y orientación social en Nodo360" class="floating-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quienes Somos: Nataly & Margarita -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        <span>Equipo Fundador</span>
+                    </div>
+                    <h2 class="title-with-line">Quiénes somos</h2>
+                    <p>
+                        Somos Trabajadoras Sociales convencidas de que el bienestar real nace del encuentro genuino entre los desafíos de las organizaciones y las necesidades de las personas.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Perfil 1: Nataly Briceño Miranda -->
+                    <article class="team-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-header">
+                            <div class="team-avatar-badge" aria-hidden="true">
+                                <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            </div>
+                            <div>
+                                <h3>Nataly Briceño Miranda</h3>
+                                <span class="team-role">Trabajadora Social</span>
+                            </div>
+                        </div>
+                        <p class="team-bio">
+                            Trabajadora Social con experiencia en intervención con infancia, adolescentes y familias, brindando orientación, acompañamiento y articulando redes de apoyo para mejorar su bienestar.
+                        </p>
+                        <p class="team-bio" style="margin-top: 10px;">
+                            Hoy enfoca su trabajo en el <strong>bienestar organizacional e inclusión laboral</strong>, promoviendo entornos saludables, equitativos y centrados en las personas.
+                        </p>
+                        <div class="team-pill">
+                            <span>🌱 Bienestar Organizacional • Inclusión Laboral • Redes de Apoyo</span>
+                        </div>
+                    </article>
+
+                    <!-- Perfil 2: Margarita González Llanos -->
+                    <article class="team-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-header">
+                            <div class="team-avatar-badge" aria-hidden="true">
+                                <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            </div>
+                            <div>
+                                <h3>Margarita González Llanos</h3>
+                                <span class="team-role">Trabajadora Social</span>
+                            </div>
+                        </div>
+                        <p class="team-bio">
+                            Trabajadora Social con experiencia orientando a personas acerca de acceso a apoyos sociales, acompañando a trabajadores, estudiantes y familias.
+                        </p>
+                        <p class="team-bio" style="margin-top: 10px;">
+                            Cuenta además con trayectoria en el área de <strong>Recursos Humanos</strong>, participando en procesos de reclutamiento, capacitación y acciones de bienestar laboral, integrando una mirada que conecta las necesidades de las personas con los espacios donde se desarrollan.
+                        </p>
+                        <div class="team-pill">
+                            <span>🏢 Gestión de Personas (RRHH) • Capacitación • Apoyos Sociales</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Enfoque Puente -->
+                <div class="impact-banner" style="margin-top: 45px;" data-aos="fade-up">
+                    <h4>🎯 Nuestro Enfoque Estratégico</h4>
+                    <p style="max-width: 820px; margin: 0 auto; color: var(--text-color); font-size: 1.05rem;">
+                        Buscamos ser un apoyo estratégico, facilitando espacios de encuentro y diálogo constructivo entre los desafíos de las organizaciones y las necesidades de las personas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Escenario Actual: Triple Presión Organizacional (Dossier) -->
+        <section id="solucion" class="section-secondary">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                        <span>Diagnóstico del Entorno</span>
+                    </div>
+                    <h2 class="title-with-line">El Escenario Actual de las Organizaciones</h2>
+                    <p>Las organizaciones enfrentan una triple presión que impacta directamente su desempeño y sostenibilidad.</p>
+                </div>
+
+                <div class="pressure-grid">
+                    <!-- Ausentismo -->
+                    <article class="pressure-card" data-aos="fade-up" data-aos-delay="100">
+                        <span class="pressure-badge">Continuidad Operacional</span>
+                        <h3>Aumenta el Ausentismo</h3>
+                        <div class="pressure-stat">+7.000.000</div>
+                        <p>De licencias médicas emitidas en el último período. El <strong>35,1% de los cotizantes</strong> hizo al menos una licencia durante el año.</p>
+                    </article>
+
+                    <!-- Riesgos Psicosociales -->
+                    <article class="pressure-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="pressure-badge">Salud Mental</span>
+                        <h3>Riesgos Psicosociales</h3>
+                        <div class="pressure-stat">32% del Total</div>
+                        <p>La salud mental lidera los diagnósticos: representa el <strong>63,3% en el sector privado</strong> con un alza del 169% en la última década.</p>
+                    </article>
+
+                    <!-- Exigencias Regulatorias -->
+                    <article class="pressure-card" data-aos="fade-up" data-aos-delay="300">
+                        <span class="pressure-badge">Marco Legal Vigente</span>
+                        <h3>Nuevas Exigencias Legales</h3>
+                        <div class="pressure-stat">Gestión Preventiva</div>
+                        <p><strong>Ley Karin (N°21.643)</strong>, <strong>Inclusión Laboral (N°21.015)</strong>, <strong>Conciliación y Cuidados (N°21.645)</strong> e <strong>ISO 45003</strong> exigen prevención activa.</p>
+                    </article>
+                </div>
+
+                <!-- Puente Estratégico Nodo360 -->
+                <div class="bridge-box" data-aos="zoom-in">
+                    <div class="bridge-grid">
+                        <div class="bridge-col">
+                            <h4>Organización y RRHH</h4>
+                            <ul>
+                                <li>Recursos y beneficios internos</li>
+                                <li>Cumplimiento normativo y protocolos</li>
+                                <li>Gestión preventiva y cultura saludable</li>
+                                <li>Continuidad operacional protegida</li>
+                            </ul>
+                        </div>
+
+                        <div class="bridge-center">
+                            <div class="bridge-node-icon" aria-hidden="true">
+                                <svg class="ui-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                            </div>
+                            <p style="font-weight: 700; color: var(--accent); font-size: 1.15rem; margin-bottom: 2px;">NODO360 SOCIAL</p>
+                            <p style="font-size: 0.85rem; color: #FFF; opacity: 0.95;">El Puente Entre Personas y Empresa</p>
+                        </div>
+
+                        <div class="bridge-col">
+                            <h4>Personas y Calidad de Vida</h4>
+                            <ul>
+                                <li>Detección temprana de necesidades sociales</li>
+                                <li>Orientación y acceso a beneficios</li>
+                                <li>Acompañamiento en situaciones críticas</li>
+                                <li>Ambiente de confianza y contención</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodología NODO Connect -->
+        <section id="metodologia" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        <span>Metodología Probada</span>
+                    </div>
+                    <h2 class="title-with-line">Metodología NODO Connect</h2>
+                    <p>
+                        Un modelo integral en 5 fases para conectar personas con soluciones y organizaciones con resultados sostenibles.
+                        <br><strong style="color: var(--primary-dark);">🔒 100% confidencial para el colaborador y para la empresa.</strong>
+                    </p>
+                </div>
+
+                <div class="method-grid">
+                    <!-- Fase 1 -->
+                    <div class="method-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-num" aria-hidden="true">1</div>
+                        <h4>Explorar</h4>
+                        <p>Identificar brechas, necesidades y riesgos para construir una hoja de ruta priorizada según los desafíos de tu organización.</p>
+                    </div>
+
+                    <!-- Fase 2 -->
+                    <div class="method-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-num" aria-hidden="true">2</div>
+                        <h4>Intervenir</h4>
+                        <p>Abordar oportunamente las necesidades sociales que impactan a las personas y a su desempeño laboral.</p>
+                    </div>
+
+                    <!-- Fase 3 -->
+                    <div class="method-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-num" aria-hidden="true">3</div>
+                        <h4>Fortalecer</h4>
+                        <p>Integrar el bienestar y la gestión preventiva con las prácticas organizacionales y el cumplimiento normativo.</p>
+                    </div>
+
+                    <!-- Fase 4 -->
+                    <div class="method-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-num" aria-hidden="true">4</div>
+                        <h4>Desarrollar</h4>
+                        <p>Fortalecer el rol de liderazgo actuando como escudo preventivo, potenciando la confianza de los equipos.</p>
+                    </div>
+
+                    <!-- Fase 5 -->
+                    <div class="method-step" data-aos="fade-up" data-aos-delay="500">
+                        <div class="step-num" aria-hidden="true">5</div>
+                        <h4>Consolidar</h4>
+                        <p>Desarrollar factores protectores continuos y promover una cultura sostenible y saludable de bienestar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosistema de Valor Nodo360 (Dossier Page 6) -->
+        <section id="ecosistema" class="section-secondary">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        <span>Ecosistema de Valor</span>
+                    </div>
+                    <h2 class="title-with-line">¿Qué aporta Nodo360 a tu Organización?</h2>
+                    <p>Diagnóstico, intervención, acompañamiento y reportabilidad adaptados a la realidad de cada empresa.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3>Normativa</h3>
+                        <p>Convertimos la gestión y los protocolos legales en evidencia concreta de cumplimiento preventivo.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                        </div>
+                        <h3>Desempeño</h3>
+                        <p>Impulsamos el bienestar laboral que fortalece el compromiso, la motivación y la productividad del equipo.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                        </div>
+                        <h3>Estrategia</h3>
+                        <p>Información precisa, semáforos y reportes para decidir y actuar oportunamente ante riesgos psicosociales.</p>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3>Respaldo Experto</h3>
+                        <p>Trabajamos como una extensión de tu equipo, con enfoque social profesional y visión estratégica integral.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Nodo360 -->
+        <section id="services" class="section-bg">
+            <div class="diagonal-stripes stripes-bottom-right" aria-hidden="true"></div>
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        <span>Servicios y Acompañamiento</span>
+                    </div>
+                    <h2 class="title-with-line">Nuestras Líneas de Apoyo</h2>
+                    <p>Soluciones diseñadas tanto para el soporte corporativo continuo como para la orientación de personas.</p>
+                </div>
+                
+                <div class="audience-tabs" data-aos="fade-up" data-aos-delay="100" role="tablist" aria-label="Filtrar servicios">
+                    <button class="tab-btn active" role="tab" aria-selected="true" onclick="filterServices('all')">Todos los servicios</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" onclick="filterServices('organizaciones')">Para Organizaciones</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" onclick="filterServices('personas')">Para Personas y Familias</button>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Org 1: Bienestar Externalizado -->
+                    <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </div>
+                        <h3>Bienestar Social Externalizado</h3>
+                        <p>Servicio continuo de Trabajadora Social externa para organizaciones que no cuentan con esta área interna. Apoyo integral y estratégico para la gestión de personas.</p>
+                    </div>
+
+                    <!-- Org 2: Gestión Preventiva y Normativa -->
+                    <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                        </div>
+                        <h3>Cumplimiento y Gestión Preventiva</h3>
+                        <p>Alineación práctica frente a Ley Karin, Ley de Inclusión Laboral (21.015), Conciliación de Cuidados (21.645) y factores psicosociales (ISO 45003).</p>
+                    </div>
+
+                    <!-- Org 3: Charlas y Talleres -->
+                    <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg>
+                        </div>
+                        <h3>Charlas, Talleres y Capacitación</h3>
+                        <p>Espacios educativos prácticos para equipos y líderes orientados al aprovechamiento de redes de apoyo social y desarrollo de ambientes laborales saludables.</p>
+                    </div>
+
+                    <!-- Persona 1: Diagnóstico y RSH -->
+                    <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                        </div>
+                        <h3>Orientación Social Individual</h3>
+                        <p>Atención personalizada y confidencial para resolver dudas sobre el Registro Social de Hogares (RSH), salud, pensiones, educación y redes comunitarias.</p>
+                    </div>
+                    
+                    <!-- Persona 2: Postulación a Subsidios -->
+                    <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                        </div>
+                        <h3>Asesoría en Subsidios Habitacionales y Empleo</h3>
+                        <p>Acompañamiento paso a paso en postulaciones de vivienda (DS49, DS1, arriendo) y subsidios laborales (Subsidio al Empleo Joven) sin enredos técnicos.</p>
+                    </div>
+
+                    <!-- Org/Persona: Derivación a Redes -->
+                    <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-wrap" aria-hidden="true">
+                            <svg class="ui-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                        </div>
+                        <h3>Derivación y Articulación de Redes</h3>
+                        <p>Vinculación efectiva de casos específicos con instituciones públicas y privadas, programas estatales y redes de protección correspondientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Session (Dossier Page 7) -->
+        <section id="discovery" class="section">
+            <div class="container">
+                <div class="discovery-banner" data-aos="zoom-in">
+                    <div class="discovery-content">
+                        <span class="discovery-badge">Oportunidad Estratégica para Organizaciones</span>
+                        <h3>NODO Connect: Discovery Session</h3>
+                        <p style="font-size: 1.05rem; color: var(--text-color); margin-bottom: 18px;">
+                            Una sesión estratégica de <strong>60 minutos</strong> en la que obtendrás una visión clara del estado actual de tu organización e identificarás las principales oportunidades para reducir riesgos y potenciar el bienestar laboral.
+                        </p>
+
+                        <div class="discovery-deliverables">
+                            <div class="discovery-item">
+                                <span class="check" aria-hidden="true">✓</span>
+                                <div>
+                                    <h5>Diagnóstico Ejecutivo Inicial</h5>
+                                    <p>Visión ejecutiva de fortalezas, brechas y oportunidades prioritarias de tu empresa.</p>
+                                </div>
+                            </div>
+
+                            <div class="discovery-item">
+                                <span class="check" aria-hidden="true">✓</span>
+                                <div>
+                                    <h5>Semáforo Preventivo Nodo360</h5>
+                                    <p>Priorización visual de las brechas con mayor impacto para las personas y la organización.</p>
+                                </div>
+                            </div>
+
+                            <div class="discovery-item">
+                                <span class="check" aria-hidden="true">✓</span>
+                                <div>
+                                    <h5>Guía Ejecutiva Nodo360</h5>
+                                    <p>Herramientas y recomendaciones prácticas para fortalecer el bienestar y el cumplimiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discovery-cta-box">
+                        <span class="price-strike">Valor Regular: 8 UF</span>
+                        <div class="free-tag">SIN COSTO</div>
+                        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 20px;">
+                            Por tiempo limitado para empresas que deseen evaluar su gestión preventiva y bienestar laboral.
+                        </p>
+                        <a href="#contact" class="btn btn-secondary" style="width: 100%;">
+                            <span>Agendar Sesión Discovery</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mitos vs Realidades -->
+        <section id="mitos" class="section-bg">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        <span>Educación Social y Laboral</span>
+                    </div>
+                    <h2 class="title-with-line">Mitos vs Realidades</h2>
+                    <p>Derribemos creencias erróneas sobre el bienestar, las normativas y los beneficios sociales.</p>
+                </div>
+
+                <div class="myr-grid">
+                    <!-- Mito 1 -->
+                    <div class="myr-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="badge-mito">
+                            <span>✕</span> MITO
+                        </div>
+                        <h3 class="myth-text">"El bienestar laboral es un gasto prescindible o solo actividades recreativas."</h3>
+                        
+                        <div class="arrow-divider" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+
+                        <div class="reality-box">
+                            <h4><span>✓</span> REALIDAD</h4>
+                            <p>El bienestar estratégico es un activo de continuidad operacional: reduce licencias médicas, mitiga riesgos psicosociales y disminuye la rotación de talento.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mito 2 -->
+                    <div class="myr-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="badge-mito">
+                            <span>✕</span> MITO
+                        </div>
+                        <h3 class="myth-text">"El Registro Social de Hogares es solo para personas en extrema vulnerabilidad."</h3>
+                        
+                        <div class="arrow-divider" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+
+                        <div class="reality-box">
+                            <h4><span>✓</span> REALIDAD</h4>
+                            <p>El RSH contempla 7 tramos (de 0% a 100%). Muchos beneficios habitacionales de sectores medios (DS1) y subsidios laborales exigen tramos de hasta el 80% o 90%.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mito 3 -->
+                    <div class="myr-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="badge-mito">
+                            <span>✕</span> MITO
+                        </div>
+                        <h3 class="myth-text">"Cumplir la Ley Karin solo requiere tener un protocolo guardado en un documento."</h3>
+                        
+                        <div class="arrow-divider" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </div>
+
+                        <div class="reality-box">
+                            <h4><span>✓</span> REALIDAD</h4>
+                            <p>La normativa exige gestión preventiva continua, capacitación a líderes y equipos, y mecanismos reales de detección temprana de factores de riesgo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Carousel -->
+        <section id="instagram" class="section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="accent-badge">
+                        <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Comunidad Digital</span>
+                    </div>
+                    <h2 class="title-with-line">Nuestra Comunidad en Instagram</h2>
+                    <p>Tips prácticos, actualizaciones normativas y guías paso a paso para personas y equipos de trabajo.</p>
+                </div>
+                
+                <div id="image-carousel" class="splide" aria-label="Carrusel de publicaciones de Instagram" data-aos="fade-up" data-aos-delay="100">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Orientación RSH en Instagram">
+                                    <img src="./assets/ig-1.jpg" alt="Infografía sobre Registro Social de Hogares y tramos de vulnerabilidad">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Ahorro para Vivienda en Instagram">
+                                    <img src="./assets/ig-2.jpg" alt="Guía sobre cuentas de ahorro para la vivienda y subsidios habitacionales">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Acompañamiento Social en Instagram">
+                                    <img src="./assets/ig-3.jpg" alt="Acompañamiento y orientación social paso a paso">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Mitos y Realidades en Instagram">
+                                    <img src="./assets/ig-4.jpg" alt="Serie educativa de Mitos y Realidades en materias sociales">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Subsidios 2026 en Instagram">
+                                    <img src="./assets/ig-5.jpg" alt="Calendario y requisitos para subsidios habitacionales en Chile">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="ig-card" aria-label="Ver post sobre Guías de Apoyo en Instagram">
+                                    <img src="./assets/ig-6.jpg" alt="Consejos de ahorro y postulación sin rechazos">
+                                    <span class="ig-view">Ver en Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 35px;" data-aos="fade-up">
+                    <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <span>Visitar @nodo360social en Instagram</span>
                     </a>
                 </div>
             </div>
-            <div class="hero-image" data-aos="zoom-in" data-aos-delay="100">
-                <img src="./assets/hero-social.png" alt="Acompañamiento y Bienestar Social Nodo360" class="floating-img">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Quienes Somos / Equipo Fundador -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Equipo Experto</span>
-                <h2 class="title-with-line">Quiénes somos</h2>
-                <p>
-                    Somos Trabajadoras Sociales convencidas de que el bienestar real nace del encuentro genuino entre los desafíos de las organizaciones y las necesidades de las personas.
-                </p>
-            </div>
+        <!-- Contact Section -->
+        <section id="contact" class="section-secondary">
+            <div class="container">
+                <div class="contact-box" data-aos="flip-up">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h2>¿Hablamos?</h2>
+                            <p>
+                                Ya sea que representes a una empresa buscando fortalecer su área de personas o que necesites asesoría social individual, estamos aquí para escucharte y acompañarte.
+                            </p>
+                            
+                            <div class="speech-bubble">
+                                “Buscamos ser el puente estratégico entre las metas de tu organización y las necesidades de tu equipo.”
+                            </div>
 
-            <div class="team-grid">
-                <!-- Nataly Briceño Miranda -->
-                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="team-header">
-                        <div class="team-avatar-badge">🤝</div>
-                        <div>
-                            <h3>Nataly Briceño Miranda</h3>
-                            <span class="team-role">Trabajadora Social</span>
-                        </div>
-                    </div>
-                    <p class="team-bio">
-                        Trabajadora Social con experiencia en intervención con infancia, adolescentes y familias, brindando orientación, acompañamiento y articulando redes de apoyo para mejorar su bienestar.
-                    </p>
-                    <p class="team-bio" style="margin-top: 10px;">
-                        Hoy enfoca su trabajo en el <strong>bienestar organizacional e inclusión laboral</strong>, promoviendo entornos saludables, equitativos y centrados en las personas.
-                    </p>
-                    <span class="team-pill">🌱 Bienestar Organizacional • Inclusión Laboral • Redes de Apoyo</span>
-                </div>
-
-                <!-- Margarita González Llanos -->
-                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="team-header">
-                        <div class="team-avatar-badge">💡</div>
-                        <div>
-                            <h3>Margarita González Llanos</h3>
-                            <span class="team-role">Trabajadora Social</span>
-                        </div>
-                    </div>
-                    <p class="team-bio">
-                        Trabajadora Social con experiencia orientando a personas acerca de acceso a apoyos sociales, acompañando a trabajadores, estudiantes y familias.
-                    </p>
-                    <p class="team-bio" style="margin-top: 10px;">
-                        Cuenta además con trayectoria en el área de <strong>Recursos Humanos</strong>, participando en procesos de reclutamiento, capacitación y acciones de bienestar laboral, integrando una mirada que conecta las necesidades de las personas con los espacios donde se desarrollan.
-                    </p>
-                    <span class="team-pill">🏢 Gestión de Personas (RRHH) • Capacitación • Apoyos Sociales</span>
-                </div>
-            </div>
-
-            <!-- Filosofía Puente -->
-            <div class="impact-banner" style="margin-top: 45px;" data-aos="fade-up">
-                <h4>🎯 Nuestro Enfoque Estratégico</h4>
-                <p style="max-width: 820px; margin: 0 auto; color: var(--text-color); font-size: 1.05rem;">
-                    Buscamos ser un apoyo estratégico, facilitando espacios de encuentro y diálogo constructivo entre las metas operativas de las organizaciones y el bienestar integral de sus colaboradores.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Escenario Actual & Desafíos Organizacionales (Dossier) -->
-    <section id="solucion" class="section-secondary">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Contexto y Tendencias</span>
-                <h2 class="title-with-line">El Escenario Actual de las Organizaciones</h2>
-                <p>Las empresas enfrentan hoy una triple presión que impacta directamente su desempeño y sostenibilidad operacional.</p>
-            </div>
-
-            <div class="pressure-grid">
-                <!-- Ausentismo -->
-                <div class="pressure-card" data-aos="fade-up" data-aos-delay="100">
-                    <span class="pressure-badge">Continuidad Operacional</span>
-                    <h3>Aumento del Ausentismo</h3>
-                    <div class="pressure-stat">+7 Millones</div>
-                    <p>De licencias emitidas durante el 2025 en Chile. El 35,1% de los cotizantes tramitó al menos una licencia en el año.</p>
-                </div>
-
-                <!-- Riesgos Psicosociales -->
-                <div class="pressure-card" data-aos="fade-up" data-aos-delay="200">
-                    <span class="pressure-badge">Salud Mental</span>
-                    <h3>Riesgos Psicosociales</h3>
-                    <div class="pressure-stat">32% del Total</div>
-                    <p>La salud mental lidera los diagnósticos (63,3% en sector privado), con un alza del 169% en la última década.</p>
-                </div>
-
-                <!-- Nuevas Exigencias Regulatorias -->
-                <div class="pressure-card" data-aos="fade-up" data-aos-delay="300">
-                    <span class="pressure-badge">Marco Regulatorio</span>
-                    <h3>Nuevas Exigencias Legales</h3>
-                    <div class="pressure-stat">Cumplimiento</div>
-                    <p>Ley Karin (N°21.643), Inclusión Laboral (N°21.015), Conciliación y Cuidados (N°21.645) e ISO 45003 exigen gestión preventiva.</p>
-                </div>
-            </div>
-
-            <!-- El Puente de Nodo360 -->
-            <div class="bridge-box" data-aos="zoom-in">
-                <div class="bridge-grid">
-                    <div class="bridge-col">
-                        <h4>Organización y RRHH</h4>
-                        <ul>
-                            <li>Recursos y beneficios internos</li>
-                            <li>Cumplimiento normativo y protocolos</li>
-                            <li>Gestión preventiva y cultura saludable</li>
-                            <li>Continuidad operacional</li>
-                        </ul>
-                    </div>
-
-                    <div class="bridge-center">
-                        <div class="bridge-node-icon">🤝</div>
-                        <p style="font-weight: 700; color: var(--accent); font-size: 1.1rem;">NODO360</p>
-                        <p style="font-size: 0.85rem; color: #FFF; opacity: 0.9;">Puente Intermediario Estratégico</p>
-                    </div>
-
-                    <div class="bridge-col">
-                        <h4>Personas y Calidad de Vida</h4>
-                        <ul>
-                            <li>Detección de necesidades sociales</li>
-                            <li>Orientación y acceso a beneficios</li>
-                            <li>Acompañamiento en situaciones críticas</li>
-                            <li>Clima laboral protegido y cercano</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Metodología NODO Connect -->
-    <section id="metodologia" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Ruta de Trabajo</span>
-                <h2 class="title-with-line">Metodología NODO Connect</h2>
-                <p>
-                    Un modelo integral estructurado en 5 etapas para conectar personas con soluciones y organizaciones con mejores resultados. 
-                    <br><strong style="color: var(--primary-dark);">100% confidencial para el colaborador y para la empresa.</strong>
-                </p>
-            </div>
-
-            <div class="method-grid">
-                <!-- Paso 1 -->
-                <div class="method-step" data-aos="fade-up" data-aos-delay="100">
-                    <div class="step-num">1</div>
-                    <h4>Explorar</h4>
-                    <p>Identificar brechas, necesidades y riesgos para construir una hoja de ruta priorizada según los desafíos de tu organización.</p>
-                </div>
-
-                <!-- Paso 2 -->
-                <div class="method-step" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-num">2</div>
-                    <h4>Intervenir</h4>
-                    <p>Abordar oportunamente las situaciones sociales y familiares que impactan a las personas y a su desempeño laboral.</p>
-                </div>
-
-                <!-- Paso 3 -->
-                <div class="method-step" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-num">3</div>
-                    <h4>Fortalecer</h4>
-                    <p>Integrar el bienestar y la gestión preventiva con las prácticas organizacionales y el cumplimiento normativo exigido.</p>
-                </div>
-
-                <!-- Paso 4 -->
-                <div class="method-step" data-aos="fade-up" data-aos-delay="400">
-                    <div class="step-num">4</div>
-                    <h4>Desarrollar</h4>
-                    <p>Potenciar el rol de las jefaturas y liderazgos actuando como escudo protector y preventivo de los equipos.</p>
-                </div>
-
-                <!-- Paso 5 -->
-                <div class="method-step" data-aos="fade-up" data-aos-delay="500">
-                    <div class="step-num">5</div>
-                    <h4>Consolidar</h4>
-                    <p>Desarrollar factores protectores continuos y promover una cultura sostenible de bienestar organizacional.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios Nodo360 -->
-    <section id="services" class="section-bg">
-        <div class="diagonal-stripes stripes-bottom-right"></div>
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Nuestra Oferta</span>
-                <h2 class="title-with-line">Servicios y Acompañamiento</h2>
-                <p>Soluciones diseñadas tanto para el soporte corporativo como para la orientación individual de colaboradores.</p>
-            </div>
-            
-            <div class="audience-tabs" data-aos="fade-up" data-aos-delay="100">
-                <button class="tab-btn active" onclick="filterServices('all')">Todos los servicios</button>
-                <button class="tab-btn" onclick="filterServices('organizaciones')">Para Organizaciones</button>
-                <button class="tab-btn" onclick="filterServices('personas')">Para Personas y Familias</button>
-            </div>
-
-            <div class="services-grid">
-                <!-- Org 1: Bienestar Externalizado -->
-                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-wrap">🏢</div>
-                    <h3>Bienestar Social Externalizado</h3>
-                    <p>Servicio continuo de Trabajadora Social externa para organizaciones que no cuentan con esta área interna. Apoyo integral y estratégico para la gestión de personas.</p>
-                </div>
-
-                <!-- Org 2: Gestión Preventiva y Normativa -->
-                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-wrap">📋</div>
-                    <h3>Cumplimiento y Gestión Preventiva</h3>
-                    <p>Alineación práctica frente a Ley Karin, Ley de Inclusión Laboral (21.015), Conciliación de Cuidados (21.645) y factores psicosociales (ISO 45003).</p>
-                </div>
-
-                <!-- Org 3: Charlas y Talleres -->
-                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-wrap">💡</div>
-                    <h3>Charlas, Talleres y Capacitación</h3>
-                    <p>Espacios educativos prácticos para equipos y líderes orientados al aprovechamiento de redes de apoyo social y desarrollo de ambientes laborales saludables.</p>
-                </div>
-
-                <!-- Persona 1: Diagnóstico y RSH -->
-                <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-wrap">🤝</div>
-                    <h3>Orientación Social Individual</h3>
-                    <p>Atención personalizada y confidencial para resolver dudas sobre el Registro Social de Hogares (RSH), salud, pensiones, educación y redes comunitarias.</p>
-                </div>
-                
-                <!-- Persona 2: Postulación a Subsidios -->
-                <div class="service-card" data-service="personas" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-wrap">🏠</div>
-                    <h3>Asesoría en Subsidios Habitacionales y Empleo</h3>
-                    <p>Acompañamiento paso a paso en postulaciones de vivienda (DS49, DS1, arriendo) y subsidios laborales (Subsidio al Empleo Joven) sin enredos técnicos.</p>
-                </div>
-
-                <!-- Org/Persona: Derivación a Redes -->
-                <div class="service-card" data-service="organizaciones" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon-wrap">🔄</div>
-                    <h3>Derivación y Articulación de Redes</h3>
-                    <p>Vinculación efectiva de casos específicos con instituciones públicas y privadas, programas estatales y redes de protección correspondientes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Discovery Session (Oferta Especial Dossier) -->
-    <section id="discovery" class="section">
-        <div class="container">
-            <div class="discovery-banner" data-aos="zoom-in">
-                <div class="discovery-content">
-                    <span class="discovery-badge">🎁 Oportunidad por Tiempo Limitado</span>
-                    <h3>NODO Connect: Discovery Session</h3>
-                    <p style="font-size: 1.05rem; color: var(--text-color); margin-bottom: 18px;">
-                        Una sesión estratégica de <strong>60 minutos</strong> en la que obtendrás una visión clara del estado de tu organización e identificarás las principales oportunidades para reducir riesgos y potenciar el bienestar.
-                    </p>
-
-                    <div class="discovery-deliverables">
-                        <div class="discovery-item">
-                            <span class="check">✓</span>
-                            <div>
-                                <h5>Diagnóstico Ejecutivo Inicial</h5>
-                                <p>Visión ejecutiva de fortalezas, brechas y oportunidades prioritarias de tu empresa.</p>
+                            <div class="contact-direct-links">
+                                <p><strong>Correo directo:</strong> <a href="mailto:conecta@nodo360social.cl">conecta@nodo360social.cl</a></p>
+                                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer">@nodo360social</a></p>
+                                <p><strong>Sitio Web:</strong> <a href="https://www.nodo360social.cl" target="_blank" rel="noopener noreferrer">www.nodo360social.cl</a></p>
                             </div>
                         </div>
 
-                        <div class="discovery-item">
-                            <span class="check">✓</span>
-                            <div>
-                                <h5>Semáforo Preventivo Nodo360</h5>
-                                <p>Priorización visual de las brechas con mayor impacto para las personas y la organización.</p>
-                            </div>
-                        </div>
-
-                        <div class="discovery-item">
-                            <span class="check">✓</span>
-                            <div>
-                                <h5>Guía Ejecutiva Nodo360</h5>
-                                <p>Herramientas y recomendaciones prácticas para fortalecer el bienestar y el cumplimiento.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="discovery-cta-box">
-                    <span class="price-strike">Valor Regular: 8 UF</span>
-                    <div class="free-tag">SIN COSTO</div>
-                    <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 20px;">
-                        Exclusivo para empresas que deseen evaluar su gestión preventiva y bienestar laboral.
-                    </p>
-                    <a href="#contact" class="btn btn-secondary" style="width: 100%;">Solicitar Sesión Discovery</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mitos vs Realidad -->
-    <section id="mitos" class="section-bg">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Educación Social</span>
-                <h2 class="title-with-line">Mitos vs Realidades</h2>
-                <p>Derribemos creencias erróneas sobre el bienestar, las normativas y los beneficios sociales.</p>
-            </div>
-
-            <div class="myr-grid">
-                <!-- Mito 1 -->
-                <div class="myr-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="badge-mito">
-                        <span>❌</span> MITO
-                    </div>
-                    <h3 class="myth-text">"El bienestar laboral es un gasto prescindible o solo actividades recreativas."</h3>
-                    
-                    <div class="arrow-divider">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </div>
-
-                    <div class="reality-box">
-                        <h4><span>✓</span> REALIDAD</h4>
-                        <p>El bienestar estratégico es un activo de continuidad operacional: reduce licencias médicas, mitiga riesgos psicosociales y disminuye la rotación de talento.</p>
-                    </div>
-                </div>
-
-                <!-- Mito 2 -->
-                <div class="myr-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="badge-mito">
-                        <span>❌</span> MITO
-                    </div>
-                    <h3 class="myth-text">"El Registro Social de Hogares es solo para personas en extrema vulnerabilidad."</h3>
-                    
-                    <div class="arrow-divider">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </div>
-
-                    <div class="reality-box">
-                        <h4><span>✓</span> REALIDAD</h4>
-                        <p>El RSH contempla 7 tramos (de 0% a 100%). Muchos beneficios habitacionales de sectores medios (DS1) y subsidios laborales exigen tramos de hasta el 80% o 90%.</p>
-                    </div>
-                </div>
-
-                <!-- Mito 3 -->
-                <div class="myr-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="badge-mito">
-                        <span>❌</span> MITO
-                    </div>
-                    <h3 class="myth-text">"Cumplir la Ley Karin solo requiere tener un protocolo guardado en un documento."</h3>
-                    
-                    <div class="arrow-divider">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </div>
-
-                    <div class="reality-box">
-                        <h4><span>✓</span> REALIDAD</h4>
-                        <p>La normativa exige gestión preventiva continua, capacitación a líderes y equipos, y mecanismos reales de detección temprana de factores de riesgo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram Community Carousel -->
-    <section id="instagram" class="section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="accent-badge">Comunidad & Redes</span>
-                <h2 class="title-with-line">Nuestra Comunidad en Instagram</h2>
-                <p>Comparte y aprende con nosotros: tips prácticos, actualizaciones normativas y guías paso a paso 💚</p>
-            </div>
-            
-            <div id="image-carousel" class="splide" aria-label="Instagram Posts Carousel" data-aos="fade-up" data-aos-delay="100">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-1.jpg" alt="Post RSH y Orientación">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-2.jpg" alt="Post Ahorro Vivienda">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-3.jpg" alt="Post Acompañamiento Social">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-4.jpg" alt="Post Mitos y Realidades">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-5.jpg" alt="Post Subsidios 2026">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                        <li class="splide__slide">
-                            <a href="https://www.instagram.com/nodo360social/" target="_blank" class="ig-card">
-                                <img src="./assets/ig-6.jpg" alt="Post Guías de Apoyo">
-                                <span class="ig-view">Ver en Instagram</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 35px;" data-aos="fade-up">
-                <a href="https://www.instagram.com/nodo360social/" target="_blank" class="btn btn-outline">
-                    Visitar @nodo360social en Instagram
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-secondary">
-        <div class="container">
-            <div class="contact-box" data-aos="flip-up">
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2>¿Hablamos?</h2>
-                        <p>
-                            Ya sea que representes a una empresa buscando fortalecer su área de personas o que necesites asesoría social individual, estamos aquí para escucharte y acompañarte.
-                        </p>
-                        
-                        <div class="speech-bubble">
-                            “Buscamos ser el puente estratégico entre las metas de tu organización y las necesidades de tu equipo.” 💚
-                        </div>
-
-                        <div class="contact-direct-links">
-                            <p><strong>Correo directo:</strong> <a href="mailto:conecta@nodo360social.cl">conecta@nodo360social.cl</a></p>
-                            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/nodo360social/" target="_blank">@nodo360social</a></p>
-                            <p><strong>Sitio Web:</strong> <a href="https://www.nodo360social.cl" target="_blank">www.nodo360social.cl</a></p>
+                        <div class="contact-form-container">
+                            <h3>Agenda tu consulta o Discovery Session</h3>
+                            <form id="social-contact-form" novalidate>
+                                <div class="form-group">
+                                    <label for="name">Nombre Completo</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Tu nombre y apellido" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" id="email" class="form-control" placeholder="nombre@empresa.cl" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type">Motivo de contacto</label>
+                                    <select id="type" class="form-control" required aria-required="true">
+                                        <option value="discovery">Solicitar Discovery Session (Empresas - Sin costo)</option>
+                                        <option value="organizacion">Bienestar Externalizado / Capacitación</option>
+                                        <option value="individual">Asesoría Social Individual (RSH / Subsidios)</option>
+                                        <option value="otro">Otro tipo de consulta</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Mensaje / Desafío de tu organización</label>
+                                    <textarea id="message" rows="4" class="form-control" placeholder="Cuéntanos brevemente sobre tu equipo o consulta..." required aria-required="true"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-form">
+                                    <span>Enviar Mensaje</span>
+                                    <svg class="ui-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </button>
+                            </form>
                         </div>
                     </div>
-
-                    <div class="contact-form-container">
-                        <h3>Agenda tu consulta o Discovery Session</h3>
-                        <form id="social-contact-form">
-                            <div class="form-group">
-                                <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" class="form-control" placeholder="nombre@empresa.cl" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="type">Motivo de contacto</label>
-                                <select id="type" class="form-control" required>
-                                    <option value="discovery">Solicitar Discovery Session (Empresas - Sin costo)</option>
-                                    <option value="organizacion">Bienestar Externalizado / Capacitación</option>
-                                    <option value="individual">Asesoría Social Individual (RSH / Subsidios)</option>
-                                    <option value="otro">Otro tipo de consulta</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensaje / Desafío de tu organización</label>
-                                <textarea id="message" rows="4" class="form-control" placeholder="Cuéntanos brevemente sobre tu equipo o consulta..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-form">Enviar Mensaje</button>
-                        </form>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container footer-grid">
             <div class="footer-brand">
                 <h3>Nodo360 <span>Social</span></h3>
                 <p>
-                    Tu socio estratégico para un entorno laboral saludable, cercano y vinculado con la normativa.
+                    Tu socio estratégico para un entorno laboral saludable, cercano y vinculado con la normativa vigente.
                 </p>
                 <div class="footer-social-links">
-                    <a href="https://www.instagram.com/nodo360social/" target="_blank" class="social-icon-btn">
-                        <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
+                    <a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram Nodo360 Social">
+                        <svg class="instagram-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 2a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m4.5-1A1.25 1.25 0 1 1 15.25 8 1.25 1.25 0 0 1 16.5 7z"/></svg>
                     </a>
                 </div>
             </div>
@@ -561,6 +663,7 @@
                     <li><a href="#about">Quiénes somos</a></li>
                     <li><a href="#solucion">Escenario y Solución</a></li>
                     <li><a href="#metodologia">Metodología Nodo Connect</a></li>
+                    <li><a href="#ecosistema">Ecosistema de Valor</a></li>
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#discovery">Discovery Session</a></li>
                 </ul>
@@ -569,13 +672,13 @@
                 <h4>Contacto</h4>
                 <ul>
                     <li><a href="mailto:conecta@nodo360social.cl">conecta@nodo360social.cl</a></li>
-                    <li><a href="https://www.instagram.com/nodo360social/" target="_blank">Instagram: @nodo360social</a></li>
-                    <li><a href="https://www.nodo360social.cl" target="_blank">www.nodo360social.cl</a></li>
+                    <li><a href="https://www.instagram.com/nodo360social/" target="_blank" rel="noopener noreferrer">Instagram: @nodo360social</a></li>
+                    <li><a href="https://www.nodo360social.cl" target="_blank" rel="noopener noreferrer">www.nodo360social.cl</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Nodo360 Social. Cada solución comienza con una conexión <span>💚</span></p>
+            <p>&copy; 2026 Nodo360 Social. Cada solución comienza con una conexión.</p>
         </div>
     </footer>
 

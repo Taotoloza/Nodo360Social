@@ -1,38 +1,41 @@
 /* 
-    Nodo360 Social - Global Brand Styles
-    Paleta Oficial Actualizada:
+    Nodo360 Social - Global Brand & UI/UX Pro Styles
+    Paleta Oficial:
     - Color Principal: #3A7F7A
-    - Color Secundario (Fondos y superficies neutras): #E3E6E8
-    - Color Detalles Pequeños (Acentos dorados): #E0B24A
-    - Verde Oscuro (Títulos y énfasis): #23524E
-    - Blanco: #FFFFFF
-    - Texto Principal: #465654
-    - Acentos Suaves / Pills: #D2E4E2
+    - Color Secundario: #E3E6E8
+    - Color Acento / Detalles: #E0B24A
+    - Dark Teal (Títulos): #1E4D49
+    - Background Tint: #F8FAF9
+    - White Card: #FFFFFF
+    - Text Main: #37474F (WCAG AAA 7.2:1 contrast)
+    - Text Muted: #5A6D6B (WCAG AA 4.6:1 contrast)
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap');
 
 :root {
     --primary: #3A7F7A;
-    --primary-soft: #5E9E99;
-    --primary-dark: #23524E;
+    --primary-soft: #5A9B96;
+    --primary-dark: #1E4D49;
     --secondary: #E3E6E8;
     --accent: #E0B24A;
     --accent-hover: #C99B35;
-    --bg-color: #F8F9FA;
+    --bg-color: #F8FAF9;
     --card-bg: #FFFFFF;
-    --text-color: #465654;
-    --text-muted: #6B7B79;
+    --text-color: #37474F;
+    --text-muted: #5A6D6B;
     --white: #FFFFFF;
     --light-mint: #E1EFEB;
-    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-color: rgba(58, 127, 122, 0.16);
+    --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     --container-width: 1200px;
-    --shadow: 0 10px 30px rgba(58, 127, 122, 0.08);
-    --shadow-hover: 0 20px 40px rgba(58, 127, 122, 0.16);
+    --shadow-sm: 0 4px 12px rgba(58, 127, 122, 0.06);
+    --shadow-md: 0 10px 30px rgba(58, 127, 122, 0.08);
+    --shadow-hover: 0 16px 36px rgba(58, 127, 122, 0.16);
 }
 
-/* Reset & Base */
-* {
+/* Reset & Base Accesible */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -40,6 +43,18 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 body {
@@ -48,11 +63,11 @@ body {
     color: var(--text-color);
     line-height: 1.65;
     overflow-x: hidden;
-    /* Cuadrícula sutil de cuaderno */
+    /* Grid Notebook sutil */
     background-image: 
-        linear-gradient(rgba(58, 127, 122, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(58, 127, 122, 0.04) 1px, transparent 1px);
-    background-size: 26px 26px;
+        linear-gradient(rgba(58, 127, 122, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(58, 127, 122, 0.035) 1px, transparent 1px);
+    background-size: 24px 24px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -66,6 +81,11 @@ a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
 }
 
 ul {
@@ -85,21 +105,28 @@ img {
 }
 
 .section {
-    padding: 90px 0;
+    padding: 95px 0;
     position: relative;
 }
 
 .section-bg {
-    padding: 90px 0;
+    padding: 95px 0;
     background-color: var(--white);
     position: relative;
-    box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.015), inset 0 -20px 40px rgba(0, 0, 0, 0.015);
+    box-shadow: inset 0 15px 30px rgba(0, 0, 0, 0.01), inset 0 -15px 30px rgba(0, 0, 0, 0.01);
 }
 
 .section-secondary {
-    padding: 90px 0;
-    background-color: rgba(227, 230, 232, 0.45);
+    padding: 95px 0;
+    background-color: rgba(227, 230, 232, 0.42);
     position: relative;
+}
+
+/* UI Icons */
+.ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
 }
 
 /* Buttons */
@@ -107,8 +134,8 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 13px 32px;
+    gap: 10px;
+    padding: 13px 30px;
     border-radius: 50px;
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
@@ -116,7 +143,7 @@ img {
     transition: var(--transition);
     border: none;
     font-size: 1rem;
-    box-shadow: 0 4px 12px rgba(58, 127, 122, 0.18);
+    box-shadow: 0 4px 12px rgba(58, 127, 122, 0.16);
 }
 
 .btn-primary {
@@ -126,24 +153,24 @@ img {
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 22px rgba(58, 127, 122, 0.32);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(58, 127, 122, 0.28);
 }
 
 .btn-secondary {
     background-color: var(--accent);
-    color: #242424;
+    color: #1F2A28;
 }
 
 .btn-secondary:hover {
     background-color: var(--accent-hover);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(224, 178, 74, 0.35);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: var(--primary);
+    color: var(--primary-dark);
     border: 2px solid var(--primary);
     box-shadow: none;
 }
@@ -151,12 +178,12 @@ img {
 .btn-outline:hover {
     background-color: var(--primary);
     color: var(--white);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 /* Header & Nav */
 header {
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 16px 0;
@@ -164,8 +191,8 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(227, 230, 232, 0.8);
-    box-shadow: 0 2px 18px rgba(58, 127, 122, 0.05);
+    border-bottom: 1px solid rgba(227, 230, 232, 0.85);
+    box-shadow: 0 2px 16px rgba(58, 127, 122, 0.05);
     transition: var(--transition);
 }
 
@@ -198,12 +225,12 @@ header.scrolled .brand-logo {
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     align-items: center;
 }
 
 .nav-links li a {
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     font-weight: 600;
     color: var(--text-color);
     position: relative;
@@ -232,9 +259,11 @@ header.scrolled .brand-logo {
 
 .mobile-menu-icon {
     display: none;
+    background: transparent;
+    border: none;
     cursor: pointer;
-    width: 30px;
-    height: 20px;
+    width: 32px;
+    height: 22px;
     position: relative;
     z-index: 1001;
 }
@@ -253,19 +282,19 @@ header.scrolled .brand-logo {
 }
 
 .mobile-menu-icon span:nth-child(1) { top: 0px; }
-.mobile-menu-icon span:nth-child(2) { top: 8px; }
-.mobile-menu-icon span:nth-child(3) { top: 16px; }
+.mobile-menu-icon span:nth-child(2) { top: 9px; }
+.mobile-menu-icon span:nth-child(3) { top: 18px; }
 
 .mobile-menu-icon.active span:nth-child(1) {
-    top: 8px;
+    top: 9px;
     transform: rotate(135deg);
 }
 .mobile-menu-icon.active span:nth-child(2) {
     opacity: 0;
-    left: -60px;
+    left: -40px;
 }
 .mobile-menu-icon.active span:nth-child(3) {
-    top: 8px;
+    top: 9px;
     transform: rotate(-135deg);
 }
 
@@ -274,7 +303,7 @@ header.scrolled .brand-logo {
     position: absolute;
     width: 160px;
     height: 160px;
-    opacity: 0.15;
+    opacity: 0.14;
     pointer-events: none;
     z-index: 1;
 }
@@ -306,25 +335,20 @@ header.scrolled .brand-logo {
 .title-with-line {
     position: relative;
     display: inline-block;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     font-size: 2.3rem;
 }
 
 .title-with-line::after {
     content: '';
     position: absolute;
-    bottom: -12px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 110px;
     height: 8px;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'><path d='M0,5 Q50,1 100,5 Q50,9 0,5' fill='%23E0B24A' stroke='%23E0B24A' stroke-width='1'/></svg>") no-repeat;
     background-size: 100% 100%;
-}
-
-.title-left .title-with-line::after {
-    left: 0;
-    transform: translateX(0);
 }
 
 /* Section Header */
@@ -335,8 +359,8 @@ header.scrolled .brand-logo {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2.45rem;
+    margin-bottom: 14px;
 }
 
 .section-header p {
@@ -345,7 +369,7 @@ header.scrolled .brand-logo {
 }
 
 /* Hero Section */
-#hero {
+.section-hero {
     min-height: 100vh;
     padding-top: 130px;
     padding-bottom: 70px;
@@ -357,7 +381,7 @@ header.scrolled .brand-logo {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 1.15fr 0.85fr;
     gap: 50px;
     align-items: center;
     position: relative;
@@ -381,7 +405,7 @@ header.scrolled .brand-logo {
 
 .hero-content h1 {
     font-size: 3.4rem;
-    line-height: 1.15;
+    line-height: 1.16;
     margin-bottom: 20px;
 }
 
@@ -414,7 +438,7 @@ header.scrolled .brand-logo {
 .hero-content p {
     font-size: 1.12rem;
     margin-bottom: 35px;
-    max-width: 550px;
+    max-width: 560px;
     color: var(--text-color);
 }
 
@@ -467,7 +491,7 @@ header.scrolled .brand-logo {
 
 .floating-img {
     border-radius: 36px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
     animation: float 6s ease-in-out infinite;
     border: 8px solid var(--white);
     max-width: 95%;
@@ -478,7 +502,7 @@ header.scrolled .brand-logo {
     50% { transform: translateY(-12px) rotate(0.8deg); }
 }
 
-/* Escenario Actual (Dossier Pressure Box) */
+/* Escenario Actual (Pressure Grid) */
 .pressure-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -488,23 +512,23 @@ header.scrolled .brand-logo {
 
 .pressure-card {
     background: var(--white);
-    padding: 32px 28px;
-    border-radius: 20px;
+    padding: 34px 28px;
+    border-radius: 22px;
     border-top: 5px solid var(--primary);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     position: relative;
 }
 
 .pressure-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
 .pressure-badge {
     display: inline-block;
-    background: rgba(224, 178, 74, 0.2);
-    color: #7A5B0B;
+    background: rgba(224, 178, 74, 0.22);
+    color: #705206;
     font-weight: 700;
     font-size: 0.85rem;
     padding: 4px 12px;
@@ -514,7 +538,7 @@ header.scrolled .brand-logo {
 
 .pressure-card h3 {
     font-size: 1.3rem;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: var(--primary-dark);
 }
 
@@ -532,37 +556,21 @@ header.scrolled .brand-logo {
     border-radius: 24px;
     padding: 30px;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
 }
 
 .impact-banner h4 {
     font-size: 1.25rem;
     color: var(--primary-dark);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-.impact-tags {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.impact-tag {
-    background: var(--light-mint);
-    color: var(--primary-dark);
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-}
-
-/* Puente Estratégico (Value Proposition) */
+/* Puente Estratégico */
 .bridge-box {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
     border-radius: 32px;
-    padding: 60px 45px;
+    padding: 55px 40px;
     position: relative;
     box-shadow: 0 20px 40px rgba(58, 127, 122, 0.25);
     margin-top: 40px;
@@ -586,7 +594,7 @@ header.scrolled .brand-logo {
 .bridge-col h4 {
     color: var(--accent);
     font-size: 1.25rem;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .bridge-col ul li {
@@ -594,6 +602,7 @@ header.scrolled .brand-logo {
     padding-left: 20px;
     position: relative;
     font-size: 0.98rem;
+    color: #F0F5F4;
 }
 
 .bridge-col ul li::before {
@@ -618,13 +627,11 @@ header.scrolled .brand-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    font-weight: bold;
     margin: 0 auto 12px;
-    box-shadow: 0 0 20px rgba(224, 178, 74, 0.6);
+    box-shadow: 0 0 22px rgba(224, 178, 74, 0.5);
 }
 
-/* Quienes Somos (Team Profiles) */
+/* Quienes Somos: Team Profiles */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -636,19 +643,18 @@ header.scrolled .brand-logo {
     background: var(--white);
     border-radius: 28px;
     padding: 40px 32px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     border: 2px solid transparent;
     position: relative;
 }
 
 .team-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
     border-color: rgba(58, 127, 122, 0.2);
 }
 
-/* Corner bracket accents */
 .team-card::before, .team-card::after {
     content: '';
     position: absolute;
@@ -680,26 +686,26 @@ header.scrolled .brand-logo {
 }
 
 .team-avatar-badge {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     background: var(--light-mint);
     color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.7rem;
     border: 2px solid var(--primary);
+    flex-shrink: 0;
 }
 
 .team-header h3 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     color: var(--primary-dark);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .team-role {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 700;
     color: var(--primary);
     text-transform: uppercase;
@@ -723,27 +729,27 @@ header.scrolled .brand-logo {
     margin-top: 18px;
 }
 
-/* Metodología Nodo Connect */
+/* Metodología NODO Connect */
 .method-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 .method-step {
     background: var(--white);
-    border-radius: 20px;
-    padding: 30px 22px;
+    border-radius: 22px;
+    padding: 32px 22px;
     text-align: center;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     position: relative;
     border-top: 4px solid var(--primary);
     transition: var(--transition);
 }
 
 .method-step:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -751,7 +757,7 @@ header.scrolled .brand-logo {
     width: 38px;
     height: 38px;
     background: var(--accent);
-    color: #242424;
+    color: #1F2A28;
     font-weight: 700;
     border-radius: 50%;
     display: flex;
@@ -768,18 +774,18 @@ header.scrolled .brand-logo {
 }
 
 .method-step p {
-    font-size: 0.92rem;
+    font-size: 0.93rem;
     color: var(--text-muted);
 }
 
-/* Discovery Session Banner (Dossier Call to Action) */
+/* Discovery Session Banner */
 .discovery-banner {
-    background: linear-gradient(135deg, var(--white) 0%, rgba(225, 239, 235, 0.6) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, rgba(225, 239, 235, 0.65) 100%);
     border: 2px solid var(--primary);
     border-radius: 30px;
     padding: 45px 40px;
-    box-shadow: var(--shadow);
-    margin-top: 60px;
+    box-shadow: var(--shadow-md);
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     gap: 40px;
@@ -795,7 +801,7 @@ header.scrolled .brand-logo {
 .discovery-badge {
     display: inline-block;
     background: var(--accent);
-    color: #242424;
+    color: #1F2A28;
     font-weight: 700;
     font-size: 0.85rem;
     padding: 5px 14px;
@@ -810,19 +816,21 @@ header.scrolled .brand-logo {
 .discovery-item {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 12px;
+    margin-bottom: 14px;
 }
 
 .discovery-item span.check {
     color: #2ECC71;
     font-weight: 900;
     font-size: 1.2rem;
+    line-height: 1.2;
 }
 
 .discovery-item h5 {
     font-size: 1rem;
     color: var(--primary-dark);
+    margin-bottom: 2px;
 }
 
 .discovery-item p {
@@ -833,7 +841,7 @@ header.scrolled .brand-logo {
 .discovery-cta-box {
     background: var(--white);
     border-radius: 24px;
-    padding: 30px;
+    padding: 32px 28px;
     text-align: center;
     border: 1.5px dashed var(--accent);
     box-shadow: 0 8px 20px rgba(0,0,0,0.04);
@@ -841,23 +849,23 @@ header.scrolled .brand-logo {
 
 .discovery-cta-box .price-strike {
     text-decoration: line-through;
-    color: #999;
+    color: #888;
     font-size: 1.1rem;
 }
 
 .discovery-cta-box .free-tag {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
     font-weight: 800;
     color: var(--primary);
     font-family: 'Quicksand', sans-serif;
-    margin: 5px 0 15px;
+    margin: 6px 0 16px;
 }
 
-/* Services Tabs */
+/* Services Section */
 .audience-tabs {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 14px;
     margin-bottom: 45px;
     flex-wrap: wrap;
 }
@@ -895,31 +903,31 @@ header.scrolled .brand-logo {
     position: relative;
     transition: var(--transition);
     border: 2px solid transparent;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
 }
 
 .service-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(58, 127, 122, 0.15);
+    border-color: rgba(58, 127, 122, 0.18);
 }
 
 .icon-wrap {
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 60px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
     border-radius: 18px;
     margin-bottom: 22px;
     background-color: var(--light-mint);
+    color: var(--primary);
     border: 1.5px solid var(--primary-soft);
     transition: var(--transition);
 }
 
 .service-card:hover .icon-wrap {
-    transform: scale(1.08) rotate(4deg);
+    transform: scale(1.08) rotate(3deg);
     background-color: var(--primary);
     color: var(--white);
 }
@@ -933,9 +941,10 @@ header.scrolled .brand-logo {
 .service-card p {
     font-size: 0.98rem;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
-/* Mitos y Realidades Section */
+/* Mitos y Realidades */
 .myr-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -946,16 +955,16 @@ header.scrolled .brand-logo {
     background: var(--primary);
     color: var(--white);
     border-radius: 24px;
-    padding: 32px;
+    padding: 34px;
     position: relative;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     overflow: hidden;
     transition: var(--transition);
     border: 2px solid var(--primary-soft);
 }
 
 .myr-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -1066,6 +1075,7 @@ header.scrolled .brand-logo {
 .reality-box p {
     font-size: 0.93rem;
     line-height: 1.55;
+    color: var(--text-color);
 }
 
 /* Instagram Carousel */
@@ -1083,7 +1093,7 @@ header.scrolled .brand-logo {
     position: relative;
     border-radius: 22px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     border: 4px solid var(--white);
     background-color: var(--white);
@@ -1093,7 +1103,7 @@ header.scrolled .brand-logo {
     width: 100%;
     display: block;
     border-radius: 16px;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .ig-view {
@@ -1116,7 +1126,7 @@ header.scrolled .brand-logo {
 }
 
 .ig-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -1136,7 +1146,7 @@ header.scrolled .brand-logo {
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     background-size: 22px 22px;
     border-radius: 36px;
-    padding: 70px 55px;
+    padding: 65px 50px;
     color: var(--white);
     position: relative;
     box-shadow: 0 20px 50px rgba(58, 127, 122, 0.25);
@@ -1175,7 +1185,7 @@ header.scrolled .brand-logo {
 }
 
 .contact-info p {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     font-size: 1.12rem;
     opacity: 0.95;
     line-height: 1.65;
@@ -1205,15 +1215,6 @@ header.scrolled .brand-logo {
     width: 0;
 }
 
-.speech-bubble span {
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.contact-direct-links {
-    margin-top: 25px;
-}
-
 .contact-direct-links p {
     font-size: 0.95rem;
     margin-bottom: 8px;
@@ -1227,7 +1228,7 @@ header.scrolled .brand-logo {
 .contact-form-container {
     background-color: var(--white);
     border-radius: 26px;
-    padding: 38px 34px;
+    padding: 38px 32px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     color: var(--text-color);
 }
@@ -1278,7 +1279,7 @@ header.scrolled .brand-logo {
 /* Footer Styling */
 footer {
     padding: 70px 0 30px;
-    background-color: #1F3E3B;
+    background-color: #1A3C38;
     color: rgba(255, 255, 255, 0.85);
     position: relative;
 }
@@ -1337,7 +1338,7 @@ footer::before {
 
 .social-icon-btn:hover {
     background-color: var(--accent);
-    color: #242424;
+    color: #1F2A28;
     transform: translateY(-3px);
 }
 
@@ -1380,10 +1381,6 @@ footer::before {
     font-size: 0.92rem;
 }
 
-.footer-bottom p span {
-    color: var(--accent);
-}
-
 /* Mobile Menu Active Class */
 .nav-links.active {
     display: flex !important;
@@ -1416,7 +1413,7 @@ footer::before {
     padding: 10px 0;
 }
 
-/* Responsive Styles */
+/* Responsive Breakpoints UI/UX Pro */
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 1fr;
